@@ -17,10 +17,12 @@ Open `http://localhost:4173`. No package installation or build step is required.
 - `index.html`: page structure, English fallback content, publication and project links.
 - `styles.css`: responsive layout, colors, and typography.
 - `app.js`: accessible research-theme tabs, scroll reveals, reading progress, and active section navigation.
-- `motion.css`: staggered entrances, graph animation, scroll transitions, and hover effects.
+- `motion.css`: staggered entrances, graph signal paths, diagram tracing, workflow sequencing, scroll transitions, and hover effects.
 - `assets/`: local fonts, favicon, and social sharing image.
 
 The site respects the operating system's reduced-motion preference. Content remains readable without JavaScript. No analytics, accounts, or server-side code are required.
+
+Supporting text uses a minimum CSS size of 13px, with body copy at 16–17px. Diagram captions live in HTML so they do not shrink with the SVG illustrations. The research workflow animation pauses outside the viewport, in a hidden tab, and when reduced motion is requested.
 
 ## Deployment
 

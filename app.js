@@ -48,6 +48,12 @@ themeButtons.forEach((button, index) => {
 });
 updateTheme('provenance');
 
+document.querySelectorAll('.paper-visual svg path').forEach((path, index) => {
+  path.classList.add('diagram-trace');
+  path.setAttribute('pathLength', '1');
+  path.style.setProperty('--trace-delay', `${(index % 5) * 90}ms`);
+});
+
 const revealTargets = [...document.querySelectorAll('[data-reveal]')];
 let revealObserver;
 function syncMotionPreference() {
@@ -128,3 +134,36 @@ map.addEventListener('pointerleave', () => {
 });
 
 document.querySelector('[data-year]').textContent = String(new Date().getFullYear());
+
+// Animate the research workflow only while it is on screen and motion is enabled.
+const workflow = document.querySelector('.research-loop');
+const workflowStages = [...workflow.querySelectorAll('li')];
+let workflowVisible = false;
+let workflowTimer;
+let workflowStage = 0;
+function showWorkflowStage(index) {
+  workflowStage = index;
+  workflow.dataset.stage = String(index);
+  workflowStages.forEach((stage, position) => stage.classList.toggle('is-current', position === index));
+}
+function syncWorkflow() {
+  if (workflowTimer !== undefined) clearInterval(workflowTimer);
+  workflowTimer = undefined;
+  const running = workflowVisible && !motionPreference.matches && !document.hidden;
+  workflow.classList.toggle('is-running', running);
+  if (running) {
+    workflowTimer = setInterval(() => showWorkflowStage((workflowStage + 1) % workflowStages.length), 2800);
+  }
+}
+showWorkflowStage(0);
+if ('IntersectionObserver' in window) {
+  const workflowObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      workflowVisible = entry.isIntersecting;
+      syncWorkflow();
+    });
+  }, { threshold: 0.25 });
+  workflowObserver.observe(workflow);
+}
+document.addEventListener('visibilitychange', syncWorkflow);
+motionPreference.addEventListener('change', syncWorkflow);

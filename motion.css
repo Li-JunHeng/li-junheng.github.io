@@ -16,4 +16,22 @@
 @keyframes evidence-flow{to{stroke-dashoffset:-160}}
 @keyframes core-pulse{0%,100%{stroke-opacity:.65}50%{stroke-opacity:1;stroke-width:2}}
 @keyframes satellite-pulse{0%,100%{opacity:.45}50%{opacity:1}}
+.motion-ready .paper-row:not(.is-visible) .diagram-trace{stroke-dasharray:1;stroke-dashoffset:1}
+.motion-ready .paper-row.is-visible .diagram-trace{stroke-dasharray:1;animation:diagram-draw 1.5s var(--ease-out) var(--trace-delay,0ms) both}
+.signal-travellers{filter:drop-shadow(0 0 5px #c4e0e5);pointer-events:none}
+.research-loop .loop-number{transition:background .45s,color .45s,border-color .45s,box-shadow .45s}
+.research-loop.is-running li.is-current .loop-number{background:#f5f3ed;color:var(--navy);border-color:#f5f3ed;box-shadow:0 0 0 6px #b7d4dc18}
+.research-loop.is-running li.is-current:not(:last-child):after{background:linear-gradient(to bottom,#eff4ec,#7198a9);transform-origin:top;animation:connector-grow 2.8s var(--ease-out) both}
+.research-loop.is-running[data-stage='2'] .loop-return svg path{stroke:#d9e5e6;stroke-dasharray:8 5;animation:return-flow 1.4s linear infinite}
+.motion-ready .communication-project.is-visible .latent-channel i{animation:channel-wave 1.5s ease-in-out infinite}
+.motion-ready .communication-project.is-visible .latent-channel i:nth-child(2){animation-delay:-.3s}
+.motion-ready .communication-project.is-visible .latent-channel i:nth-child(3){animation-delay:-.6s}
+.motion-ready .communication-project.is-visible .latent-channel i:nth-child(4){animation-delay:-.9s}
+.motion-ready .communication-project.is-visible .latent-channel i:nth-child(5){animation-delay:-1.2s}
+.motion-ready .deepgraph-feature{transition:opacity .85s var(--ease-out),transform .85s var(--ease-out),box-shadow .5s}
+@keyframes diagram-draw{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
+@keyframes connector-grow{0%{transform:scaleY(0);opacity:.2}65%,100%{transform:scaleY(1);opacity:1}}
+@keyframes return-flow{to{stroke-dashoffset:-26}}
+@keyframes channel-wave{0%,100%{transform:scaleY(.55);opacity:.6}50%{transform:scaleY(1.2);opacity:1}}
 @media(prefers-reduced-motion:reduce){.motion-ready .hero-copy>*,.motion-ready .research-map,.motion-ready [data-reveal],.motion-ready .deepgraph-feature .research-loop li{opacity:1;transform:none}.reading-progress{display:none}.research-map:before{display:none}*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media(prefers-reduced-motion:reduce){.signal-travellers{display:none}.diagram-trace{stroke-dasharray:none!important;stroke-dashoffset:0!important}}
