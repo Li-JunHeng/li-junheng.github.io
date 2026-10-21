@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ed">
+  <meta name="description" content="Junheng Li — Computer Science at Wuhan University, CEO of Synesis. Research in LLM provenance, multimodal generation, and autonomous research systems.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Junheng Li · Research & Systems">
+  <meta property="og:description" content="LLM provenance. Multimodal generation. Autonomous research systems.">
+  <meta property="og:url" content="https://li-junheng.github.io/">
+  <meta property="og:image" content="https://li-junheng.github.io/assets/social-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://li-junheng.github.io/">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" href="assets/fonts/source-serif-regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="motion.css">
+  <script src="app.js" defer></script>
+  <title>Junheng Li · Research & Systems</title>
+</head>
+<body>
+  <div class="reading-progress" aria-hidden="true"><span></span></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="wordmark" href="#home" aria-label="Junheng Li, home">JL<span class="wordmark-dot">.</span></a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#research">Research</a>
+        <a href="#systems">Systems</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="header-contact" href="mailto:lijunheng07@whu.edu.cn">Let’s talk <span aria-hidden="true">↗</span></a>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero shell" id="home" aria-labelledby="hero-title">
+      <div class="hero-copy" data-hero-item>
+        <p class="eyebrow"><span class="tiny-cross" aria-hidden="true">+</span><span>RESEARCH & OPEN SYSTEMS</span></p>
+        <h1 id="hero-title">Junheng Li</h1>
+        <p class="hero-affiliation">Computer Science · Wuhan University<br>CEO · Synesis</p>
+        <p class="hero-intro">Studying how models learn.<br>Building systems that turn ideas into evidence.</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#research"><span>Explore my work</span><span aria-hidden="true">↗</span></a>
+          <a class="text-link" href="https://github.com/Li-JunHeng" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+      <aside class="research-map" data-hero-item aria-label="Research themes">
+        <div class="map-heading"><span>A CONNECTED RESEARCH PRACTICE</span><span aria-hidden="true">01—03</span></div>
+        <svg class="map-graphic" viewBox="0 0 480 360" aria-hidden="true">
+          <defs><pattern id="map-grid" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".7" fill="currentColor" opacity=".18"/></pattern></defs>
+          <rect width="480" height="360" fill="url(#map-grid)"/>
+          <circle class="map-orbit" cx="240" cy="181" r="124"/>
+          <circle class="map-orbit map-orbit-inner" cx="240" cy="181" r="79"/>
+          <path class="map-edge" d="M240 57 348 243 132 243Z M240 181V57 M240 181 348 243 M240 181 132 243"/>
+          <path class="map-edge-dashed" d="m240 57 153 62-45 124 9 70-225-70-51-93L240 57"/>
+          <g class="map-satellite"><circle cx="393" cy="119" r="4"/><circle cx="357" cy="313" r="4"/><circle cx="81" cy="150" r="4"/></g>
+          <g class="map-node" data-node="provenance"><circle cx="240" cy="57" r="17"/><text x="240" y="62">01</text></g>
+          <g class="map-node" data-node="generation"><circle cx="348" cy="243" r="17"/><text x="348" y="248">02</text></g>
+          <g class="map-node" data-node="discovery"><circle cx="132" cy="243" r="17"/><text x="132" y="248">03</text></g>
+          <circle class="map-center" cx="240" cy="181" r="26"/>
+          <path class="map-center-mark" d="M230 181h20m-10-10v20"/>
+        </svg>
+        <div class="map-tabs" role="tablist" aria-label="Research themes">
+          <button type="button" role="tab" id="theme-provenance" aria-controls="theme-detail" aria-selected="true" data-theme="provenance"><span>01</span><span>Provenance</span></button>
+          <button type="button" role="tab" id="theme-generation" aria-controls="theme-detail" aria-selected="false" tabindex="-1" data-theme="generation"><span>02</span><span>Generation</span></button>
+          <button type="button" role="tab" id="theme-discovery" aria-controls="theme-detail" aria-selected="false" tabindex="-1" data-theme="discovery"><span>03</span><span>Discovery</span></button>
+        </div>
+        <div class="map-detail" id="theme-detail" role="tabpanel" aria-labelledby="theme-provenance" tabindex="0"><p data-theme-copy>Tracing the influence of LLM supervision through observable model behavior.</p><a href="#research" data-theme-link><span>Related work</span> <span aria-hidden="true">↗</span></a></div>
+      </aside>
+    </section>
+
+    <div class="affiliation-strip shell" data-reveal><span>WUHAN UNIVERSITY · LEI JUN CLASS</span><span>LLM PROVENANCE / MULTIMODAL GENERATION / RESEARCH AGENTS</span></div>
+
+    <section class="section shell" id="research" aria-labelledby="research-title">
+      <div class="section-heading" data-reveal><div><p class="eyebrow">01 / SELECTED RESEARCH</p><h2 id="research-title">Questions worth following.</h2></div><p class="section-note">Recent work on model behavior<br>and visual generation.</p></div>
+
+      <article class="paper-row" data-reveal>
+        <div class="paper-visual provenance-visual" role="img" aria-label="Conceptual illustration of a keyed signal passing from feedback to model behavior">
+          <svg viewBox="0 0 300 230" aria-hidden="true"><defs><pattern id="paper-grid" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".65" fill="#034168" opacity=".2"/></pattern></defs><rect width="300" height="230" fill="url(#paper-grid)"/><g fill="none" stroke="#034168"><rect x="29" y="79" width="61" height="74" rx="2"/><rect x="207" y="79" width="61" height="74" rx="2"/><path d="M90 116h117m-9-6 9 6-9 6"/><path d="M45 98h29m-29 9h21m-21 9h29m-29 9h16m-16 9h25" opacity=".65"/><path d="M223 131V99m10 32v-17m10 17V99m10 32v-24" stroke-width="2"/></g><circle cx="148" cy="116" r="25" fill="#034168"/><path d="M136 116h24m-19-8v16m7-20v24m7-20v16" stroke="#f5f3ed"/><text x="59" y="178" text-anchor="middle">FEEDBACK</text><text x="237" y="178" text-anchor="middle">BEHAVIOR</text><text x="148" y="51" text-anchor="middle" class="diagram-small">KEYED SIGNAL</text></svg>
+        </div>
+        <div class="paper-copy"><div class="paper-meta"><span>PREPRINT</span><span>2026</span><span>SECOND AUTHOR</span></div><h3><a href="https://arxiv.org/abs/2610.15685" target="_blank" rel="noopener noreferrer">Radioactive Feedback: Tracing Models Trained by Label-Only LLM Supervision</a></h3><p>Can a model be traced back to the LLM that judged its training? This work studies provenance through scalar feedback, introducing keyed behavioral signals and detecting them with black-box audits.</p><div class="paper-links"><a href="https://arxiv.org/abs/2610.15685" target="_blank" rel="noopener noreferrer"><span>Read paper</span> <span aria-hidden="true">↗</span></a><a href="https://github.com/Kemalau/RadioactiveFeedBack" target="_blank" rel="noopener noreferrer"><span>Code</span> <span aria-hidden="true">↗</span></a></div></div>
+        <span class="paper-index" aria-hidden="true">01</span>
+      </article>
+
+      <article class="paper-row" data-reveal>
+        <div class="paper-visual generation-visual" role="img" aria-label="Conceptual illustration of visual planning before animation code generation">
+          <svg viewBox="0 0 300 230" aria-hidden="true"><g fill="none" stroke="#034168"><rect x="26" y="53" width="112" height="105" rx="2"/><rect x="163" y="76" width="112" height="105" rx="2"/><path d="M26 72h112M163 95h112" opacity=".5"/><path d="m139 116 23 0m-7-6 7 6-7 6"/><circle cx="67" cy="109" r="17"/><path d="m87 139 16-29 16 29Z"/><circle cx="200" cy="128" r="17" fill="#034168" fill-opacity=".14"/><path d="m221 158 16-29 16 29Z" fill="#034168" fill-opacity=".14"/><path d="M42 146V87m0 59h77M179 169v-59m0 59h77" opacity=".35"/></g><g fill="#034168"><circle cx="36" cy="63" r="2"/><circle cx="43" cy="63" r="2"/><circle cx="173" cy="86" r="2"/><circle cx="180" cy="86" r="2"/></g><text x="82" y="195" text-anchor="middle">VISUAL PRIOR</text><text x="219" y="214" text-anchor="middle">RENDER & REPAIR</text></svg>
+        </div>
+        <div class="paper-copy"><div class="paper-meta"><span>PREPRINT</span><span>2026</span><span>THIRD AUTHOR</span></div><h3><a href="https://arxiv.org/abs/2605.15585" target="_blank" rel="noopener noreferrer">See Before You Code: Learning Visual Priors for Spatially Aware Educational Animation Generation</a></h3><p>Planning the visual result before generating the code. Keyframe priors guide educational animation generation, while render feedback enables spatial evaluation and targeted local repair.</p><div class="paper-links"><a href="https://arxiv.org/abs/2605.15585" target="_blank" rel="noopener noreferrer"><span>Read paper</span> <span aria-hidden="true">↗</span></a><a href="https://github.com/AI4Learning-Club/OmniManim" target="_blank" rel="noopener noreferrer"><span>Code</span> <span aria-hidden="true">↗</span></a></div></div>
+        <span class="paper-index" aria-hidden="true">02</span>
+      </article>
+    </section>
+
+    <section class="systems-section" id="systems" aria-labelledby="systems-title">
+      <div class="shell section">
+        <div class="section-heading" data-reveal><div><p class="eyebrow">02 / SYSTEMS & OPEN SOURCE</p><h2 id="systems-title">Ideas, made executable.</h2></div><a class="text-link" href="https://github.com/Li-JunHeng" target="_blank" rel="noopener noreferrer"><span>On GitHub</span> <span aria-hidden="true">↗</span></a></div>
+        <article class="deepgraph-feature" data-reveal>
+          <div class="project-main"><div class="project-topline"><span class="project-label">TEAM PROJECT</span><a class="stars" href="https://github.com/billion-token-one-task/Deepgraph/stargazers" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">✧</span> 1,000+ <span>GitHub stars</span></a></div><h3>AutoResearch<span>DeepGraph</span></h3><p>An autonomous research system that connects literature, hypotheses, and experiments through evidence graphs. Research questions become budgeted experiments; the results inform the next iteration.</p><a class="button button-light" href="https://github.com/billion-token-one-task/Deepgraph" target="_blank" rel="noopener noreferrer"><span>Explore repository</span><span aria-hidden="true">↗</span></a></div>
+          <div class="research-loop"><p class="loop-caption">A RESEARCH WORKFLOW</p><ol><li><span class="loop-number">01</span><div><strong>Literature & evidence</strong><span>Connect claims, methods, and results.</span></div></li><li><span class="loop-number">02</span><div><strong>Questions & hypotheses</strong><span>Identify what can be tested next.</span></div></li><li><span class="loop-number">03</span><div><strong>Experiments & iteration</strong><span>Execute, evaluate, and revise.</span></div></li></ol><div class="loop-return"><svg viewBox="0 0 300 24" aria-hidden="true"><path d="M294 2v15H6V2m-4 5 4-5 4 5"/></svg><span>Let evidence shape the next question.</span></div></div>
+        </article>
+        <article class="communication-project" data-reveal><div class="communication-art" aria-hidden="true"><span>A</span><div class="latent-channel"><i></i><i></i><i></i><i></i><i></i></div><span>B</span></div><div class="communication-copy"><p class="eyebrow">RESEARCH PROTOTYPE</p><h3>Compressed Agent Communication</h3><p>Exploring communication between LLM agents through compressed latent representations, including slot-attention and other bottlenecks with a frozen LLM backbone.</p></div><a class="project-arrow" href="https://github.com/Li-JunHeng/Embedding-MultiAgents" target="_blank" rel="noopener noreferrer" aria-label="View Compressed Agent Communication on GitHub">↗</a></article>
+      </div>
+    </section>
+
+    <section class="section shell about-section" id="about" aria-labelledby="about-title"><div class="about-heading" data-reveal><p class="eyebrow">03 / A LITTLE CONTEXT</p><h2 id="about-title">Research.<br>Build. Repeat.</h2></div><div class="about-content" data-reveal><p class="about-lead">I'm an undergraduate in Computer Science and Technology at Wuhan University’s Lei Jun Class, and the founder and CEO of Synesis.</p><p>At Synesis, we build AI education products that turn natural-language questions into visual learning experiences, alongside tools for research automation. My academic interests connect model behavior, visual reasoning, and the engineering of research systems.</p><dl class="about-facts"><div><dt>EDUCATION</dt><dd>Wuhan University<br>Computer Science · Lei Jun Class</dd></div><div><dt>BUILDING</dt><dd><a href="https://synesis.cn" target="_blank" rel="noopener noreferrer">Synesis <span aria-hidden="true">↗</span></a><br><span>AI for learning & research</span></dd></div></dl></div></section>
+
+    <section class="contact-section shell" data-reveal id="contact" aria-labelledby="contact-title"><div><p class="eyebrow">04 / GET IN TOUCH</p><h2 id="contact-title">Good questions<br>start conversations.</h2></div><div class="contact-links"><a class="email-link" href="mailto:lijunheng07@whu.edu.cn">lijunheng07@whu.edu.cn <span aria-hidden="true">↗</span></a><p>For research discussions and collaboration.</p><div class="contact-socials"><a href="https://github.com/Li-JunHeng" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://synesis.cn" target="_blank" rel="noopener noreferrer">Synesis ↗</a></div></div></section>
+  </main>
+
+  <footer class="site-footer shell"><span>© <span data-year>2026</span> Junheng Li</span><span>Built with curiosity. Hosted on GitHub Pages.</span><a href="#home">Back to top ↑</a></footer>
+</body>
+</html>
